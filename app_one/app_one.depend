@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1477101399 source:/home/fcn/Projects/dev/cpp/openGL/app_one/app_one/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glew.h>
+	<GL/glut.h>
+
+1477101399 source:/home/fcn/Projects/dev/cpp/learning_openGL/app_one/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glew.h>
+	<GL/glut.h>
+
