@@ -1,6 +1,11 @@
 /*
-Another tutorial, this time from:
+OpenGL app using SDL
+
+Tutorial from:
 https://www.youtube.com/watch?v=DkiKgQRiMRU&index=5&list=PLEETnX-uPtBXT9T-hD0Bj31DSnwio-ywh
+
+by FCN - OCT/2016
+
 */
 
 #include <iostream>
@@ -12,13 +17,21 @@ using namespace std;
 
 int main()
 {
-    Display Display(800, 600, "Hello opengl");
+    // Create display object, responsable for SDL
+    // initialization and O.S. <-> GL bindings
+    Display display(800, 600, "Hello opengl");
 
-    while(!Display.IsClosed())
+    // Main loop. display.IsClosed come to true
+    // when SDL got SDL_QUIT on Poll event loop
+    while(!display.IsClosed())
     {
 
-    Display.Clear(0.35f, 0.0f, 0.45f, 1.0f);
-    Display.Update();
+    // While not, still cleanring the screen
+    // with passed RGBA color
+    display.Clear(0.35f, 0.0f, 0.45f, 1.0f);
+
+    // And calling he update method
+    display.Update();
 
     }
 

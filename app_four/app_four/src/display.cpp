@@ -1,6 +1,17 @@
+/*
+OpenGL app using SDL
+
+Tutorial from:
+https://www.youtube.com/watch?v=DkiKgQRiMRU&index=5&list=PLEETnX-uPtBXT9T-hD0Bj31DSnwio-ywh
+
+by FCN - OCT/2016
+
+*/
+
 #include "display.h"
 #include <iostream>
 #include <GL/glew.h>
+#include <string>
 
 Display::Display(int width, int height, const std::string& title)
 {
@@ -23,7 +34,7 @@ Display::Display(int width, int height, const std::string& title)
         std::cerr << "OpenGL failed to initalize." << std::endl;
     } else
     {
-        std::cerr << "OpenGL initalized." << std::endl;
+        showText("OpenGL initialized.");
     }
 
     m_queryToClose = false;
@@ -32,6 +43,7 @@ Display::Display(int width, int height, const std::string& title)
 
 Display::~Display()
 {
+    showText("Exiting...");
     SDL_GL_DeleteContext(m_glContext);
     SDL_DestroyWindow(m_Window);
     SDL_Quit();
@@ -46,6 +58,22 @@ void Display::Clear(float r, float g, float b, float a)
 {
     glClearColor(r, g, b, a);
     glClear(GL_COLOR_BUFFER_BIT);
+}
+
+void Display::showText(std::string Text)
+{
+    std::cout << this->getMessageCounter()  << " ] "<< Text << std::endl;
+}
+
+void Display::incMessageCounter(void)
+{
+    this -> m_messageCounter++;
+}
+
+long int Display::getMessageCounter(void)
+{
+    this->incMessageCounter();
+    return this->m_messageCounter;
 }
 
 void Display::Update()
