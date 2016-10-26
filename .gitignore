@@ -28,7 +28,3 @@
 *.out
 *.app
 
-# Linux executables
-app_one
-app_two
-
