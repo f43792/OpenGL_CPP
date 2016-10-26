@@ -38,6 +38,7 @@ Display::Display(int width, int height, const std::string& title)
     }
 
     m_queryToClose = false;
+    m_m_messageCounter = 0;
 
 }
 
@@ -91,4 +92,3 @@ void Display::Update()
     }
 
 }
-

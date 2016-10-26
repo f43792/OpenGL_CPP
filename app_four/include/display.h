@@ -57,7 +57,7 @@ class Display
 
         // Class variables
         bool m_queryToClose;
-        long int m_messageCounter = 0;
+        long int m_messageCounter;
 
 };
 
