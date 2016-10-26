@@ -6,6 +6,7 @@ Dependencies:
 freeglut - sudo apt install libfreeglut-dev
 glew - sudo apt install libglew-dev
 glm - sudo apt install libglm-dev
+Set to use just Atom and Makefile ;)
 */
 
 #include <stdio.h>
