@@ -6,6 +6,8 @@ https://www.youtube.com/watch?v=DkiKgQRiMRU&index=5&list=PLEETnX-uPtBXT9T-hD0Bj3
 
 by FCN - OCT/2016
 
+26-Oct-2016       FCN         - Set app to use Makefile
+
 */
 
 #include <iostream>

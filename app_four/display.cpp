@@ -29,6 +29,9 @@ Display::Display(int width, int height, const std::string& title)
 
     GLenum GL_Status = glewInit();
 
+    m_queryToClose = false;
+    m_messageCounter = 0;
+
     if (GL_Status != GLEW_OK)
     {
         std::cerr << "OpenGL failed to initalize." << std::endl;
@@ -37,8 +40,7 @@ Display::Display(int width, int height, const std::string& title)
         showText("OpenGL initialized.");
     }
 
-    m_queryToClose = false;
-    m_m_messageCounter = 0;
+
 
 }
 
