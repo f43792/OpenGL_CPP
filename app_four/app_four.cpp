@@ -27,14 +27,12 @@ int main()
     // when SDL got SDL_QUIT on Poll event loop
     while(!display.IsClosed())
     {
+        // While not, still cleanring the screen
+        // with passed RGBA color
+        display.Clear(0.35f, 0.0f, 0.45f, 1.0f);
 
-    // While not, still cleanring the screen
-    // with passed RGBA color
-    display.Clear(0.35f, 0.0f, 0.45f, 1.0f);
-
-    // And calling he update method
-    display.Update();
-
+        // And calling he update method
+        display.Update();
     }
 
     return 0;
