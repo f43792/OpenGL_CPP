@@ -27,14 +27,13 @@ Display::Display(int width, int height, const std::string& title)
     m_Window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
     m_glContext = SDL_GL_CreateContext(m_Window);
 
-    GLenum GL_Status = glewInit();
-
     m_queryToClose = false;
     m_messageCounter = 0;
 
+    GLenum GL_Status = glewInit();
     if (GL_Status != GLEW_OK)
     {
-        std::cerr << "OpenGL failed to initalize." << std::endl;
+        showText("OpenGL failed to initalize.");
     } else
     {
         showText("OpenGL initialized.");
