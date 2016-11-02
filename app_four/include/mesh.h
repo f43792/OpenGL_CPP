@@ -2,6 +2,7 @@
 #define MESH_H
 
 #include<glm/glm.hpp>
+#include<GL/glew.h>
 
 class Vertex
 {
@@ -18,7 +19,7 @@ class Vertex
 class Mesh
 {
     public:
-        Mesh();
+        Mesh(Vertex* vertices, unsigned int numVertices);
         virtual ~Mesh();
 
         void Draw();
@@ -27,6 +28,15 @@ class Mesh
     private:
         Mesh(const Mesh& other);
         Mesh& operator=(const Mesh& other);
+
+        enum {
+            POSITION_VB,
+            NUM_BUFFERS
+        };
+
+        GLuint m_vertexArrayObject;
+        GLuint m_vertexArrayBuffers[NUM_BUFFERS];
+        unsigned int m_drawCount;
 };
 
 #endif // MESH_H

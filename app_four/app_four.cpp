@@ -13,7 +13,7 @@ by FCN - OCT/2016
 #include <iostream>
 #include <GL/glew.h>
 #include "display.h"
-
+#include "mesh.h"
 
 using namespace std;
 
@@ -23,6 +23,16 @@ int main()
     // initialization and O.S. <-> GL bindings
     Display display(800, 600, "Hello opengl");
 
+    //Create vertices
+    Vertex vertices[] = { Vertex(glm::vec3(-0.5, -0.5, 0)),
+                          Vertex(glm::vec3(0, 0.5, 0)),
+                          Vertex(glm::vec3(0.5, -0.5, 0)), };
+
+    //Create a mesh, passing the recem created vertices
+    Mesh mesh(vertices, sizeof(vertices)/sizeof(vertices[0]));
+
+
+
     // Main loop. display.IsClosed come to true
     // when SDL got SDL_QUIT on Poll event loop
     while(!display.IsClosed())
@@ -30,6 +40,8 @@ int main()
         // While not, still cleanring the screen
         // with passed RGBA color
         display.Clear(0.35f, 0.0f, 0.45f, 1.0f);
+
+        mesh.Draw();
 
         // And calling he update method
         display.Update();

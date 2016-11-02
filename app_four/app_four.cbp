@@ -12,9 +12,13 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-pg" />
 					<Add option="-g" />
 					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/app_four" prefix_auto="1" extension_auto="1" />
@@ -45,7 +49,9 @@
 		<Unit filename="display.cpp" />
 		<Unit filename="display.h" />
 		<Unit filename="include/mesh.h" />
+		<Unit filename="include/shader.h" />
 		<Unit filename="src/mesh.cpp" />
+		<Unit filename="src/shader.cpp" />
 		<Extensions>
 			<envvars />
 			<code_completion />
