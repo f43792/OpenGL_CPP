@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1477555596 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/app_four.cpp
+	<iostream>
+	<GL/glew.h>
+	"display.h"
+
+1477554220 /home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/display.h
+	<SDL2/SDL.h>
+	<string>
+
+1477773115 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/display.cpp
+	"display.h"
+	<iostream>
+	<GL/glew.h>
+	<string>
+
