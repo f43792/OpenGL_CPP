@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1478217596 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/glutApp/main.cpp
+	<stdio.h>
+	<string>
+	<iostream>
+	"../include/GL/freeglut.h"
+	<GL/freeglut.h>
+	<GL/glut.h>
+
