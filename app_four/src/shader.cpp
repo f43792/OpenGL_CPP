@@ -46,7 +46,7 @@ void Shader::Bind()
 
 static GLuint CreateShader(const std::string& text, GLenum shaderType)
 {
-    GLuint shader = glCreateShader();
+    GLuint shader = glCreateShader(shaderType);
 
     if(shader == 0)
         std::cerr << "Error: shader creation failed!" << std::endl;
