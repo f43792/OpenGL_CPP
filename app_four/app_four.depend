@@ -9,7 +9,7 @@
 	<SDL2/SDL.h>
 	<string>
 
-1477773115 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/display.cpp
+1478351454 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/display.cpp
 	"display.h"
 	<iostream>
 	<GL/glew.h>
@@ -20,5 +20,12 @@
 
 1478102548 /home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/include/mesh.h
 	<glm/glm.hpp>
+	<GL/glew.h>
+
+1478119426 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/src/shader.cpp
+	"shader.h"
+
+1478104534 /home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/include/shader.h
+	<string>
 	<GL/glew.h>
 

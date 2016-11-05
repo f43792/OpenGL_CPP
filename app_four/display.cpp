@@ -21,9 +21,11 @@ Display::Display(int width, int height, const std::string& title)
     SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
-    SDL_GL_SetAttribute(SDL_GL_BUFFER_SIZE, 32);
+    SDL_GL_SetAttribute(SDL_GL_BUFFER_SIZE, 32); //RGBA = 8+8+8+8 = 32
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
+    //Since SDL is a "C" API, it can't undesrtand std::string object
+    //so we call the .c_str() method to it...
     m_Window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
     m_glContext = SDL_GL_CreateContext(m_Window);
 
