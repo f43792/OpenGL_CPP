@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1478103643 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/app_four.cpp
+1478504967 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/app_four.cpp
 	<iostream>
 	<GL/glew.h>
 	"display.h"
 	"mesh.h"
+	"shader.h"
+	"texture.h"
 
 1477554220 /home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/display.h
 	<SDL2/SDL.h>
@@ -22,10 +24,36 @@
 	<glm/glm.hpp>
 	<GL/glew.h>
 
-1478119426 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/src/shader.cpp
+1478382156 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/src/shader.cpp
 	"shader.h"
+	<iostream>
+	<fstream>
+	<string>
 
 1478104534 /home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/include/shader.h
 	<string>
 	<GL/glew.h>
+
+1478503100 /home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/include/texture.h
+	<string>
+	<GL/glew.h>
+
+1478502442 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/src/stb_image.c
+	"stb_image.h"
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	<assert.h>
+	<stdarg.h>
+
+1478502488 /home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/include/stb_image.h
+	<stdio.h>
+
+1478505266 source:/home/fcn/Projects/dev/cpp/OpenGL_CPP/app_four/src/texture.cpp
+	"texture.h"
+	"stb_image.h"
+	<cassert>
+	<iostream>
 

@@ -16,6 +16,7 @@ by FCN - OCT/2016
 #include "display.h"
 #include "mesh.h"
 #include "shader.h"
+#include "texture.h"
 
 using namespace std;
 
@@ -25,8 +26,6 @@ int main()
     // initialization and O.S. <-> GL bindings
     Display display(800, 600, "OpenGL + SDL");
 
-    //Create the basic shader
-    Shader shader("./res/basicShader");
 
     //Create vertices
     Vertex vertices[] = { Vertex(glm::vec3(-0.5, -0.5, 0)),
@@ -36,7 +35,11 @@ int main()
     //Create a mesh, passing the recem created vertices
     Mesh mesh(vertices, sizeof(vertices)/sizeof(vertices[0]));
 
+    //Create the basic shader
+    Shader shader("./res/basicShader");
 
+    //Load Texture
+    Texture texture("./res/bricks.jpg");
 
     // Main loop. display.IsClosed come to true
     // when SDL got SDL_QUIT on Poll event loop
@@ -47,6 +50,7 @@ int main()
         display.Clear(0.35f, 0.0f, 0.45f, 1.0f);
 
         shader.Bind();
+        texture.Bind(0);
 
         mesh.Draw();
 

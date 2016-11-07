@@ -50,8 +50,14 @@
 		<Unit filename="display.h" />
 		<Unit filename="include/mesh.h" />
 		<Unit filename="include/shader.h" />
+		<Unit filename="include/stb_image.h" />
+		<Unit filename="include/texture.h" />
 		<Unit filename="src/mesh.cpp" />
 		<Unit filename="src/shader.cpp" />
+		<Unit filename="src/stb_image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/texture.cpp" />
 		<Extensions>
 			<envvars />
 			<code_completion />
